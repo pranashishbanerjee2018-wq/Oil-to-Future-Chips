@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="atomSi" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </radialGradient>
+    <radialGradient id="atomDonor" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </radialGradient>
+    <radialGradient id="atomAcceptor" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </radialGradient>
+    <filter id="glowE" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="#080e1e" rx="12"/>
+  
+  <text x="400" y="38" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold">
+    SILICON CRYSTAL LATTICE &amp; DOPING FUNDAMENTALS
+  </text>
+  <text x="400" y="62" text-anchor="middle" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">
+    Intrinsic Covalent Bonds vs. Extrinsic N-Type (Phosphorus) and P-Type (Boron) Doping
+  </text>
+
+  <!-- LEFT PANEL: INTRINSIC SILICON -->
+  <g transform="translate(40, 85)">
+    <rect width="340" height="330" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" rx="8"/>
+    <text x="170" y="28" text-anchor="middle" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="bold">INTRINSIC SILICON (Pure Diamond Cubic)</text>
+    
+    <!-- Covalent bond lines -->
+    <line x1="85" y1="100" x2="170" y2="100" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="100" x2="255" y2="100" stroke="#334155" stroke-width="4"/>
+    <line x1="85" y1="185" x2="170" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="185" x2="255" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="85" y1="270" x2="170" y2="270" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="270" x2="255" y2="270" stroke="#334155" stroke-width="4"/>
+
+    <line x1="85" y1="100" x2="85" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="85" y1="185" x2="85" y2="270" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="100" x2="170" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="185" x2="170" y2="270" stroke="#334155" stroke-width="4"/>
+    <line x1="255" y1="100" x2="255" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="255" y1="185" x2="255" y2="270" stroke="#334155" stroke-width="4"/>
+
+    <!-- Atoms Si (4 valence electrons each) -->
+    <!-- Row 1 -->
+    <circle cx="85" cy="100" r="22" fill="url(#atomSi)"/>
+    <text x="85" y="106" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="170" cy="100" r="22" fill="url(#atomSi)"/>
+    <text x="170" y="106" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="255" cy="100" r="22" fill="url(#atomSi)"/>
+    <text x="255" y="106" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+
+    <!-- Row 2 -->
+    <circle cx="85" cy="185" r="22" fill="url(#atomSi)"/>
+    <text x="85" y="191" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="170" cy="185" r="22" fill="url(#atomSi)"/>
+    <text x="170" y="191" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="255" cy="185" r="22" fill="url(#atomSi)"/>
+    <text x="255" y="191" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+
+    <!-- Row 3 -->
+    <circle cx="85" cy="270" r="22" fill="url(#atomSi)"/>
+    <text x="85" y="276" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="170" cy="270" r="22" fill="url(#atomSi)"/>
+    <text x="170" y="276" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="255" cy="270" r="22" fill="url(#atomSi)"/>
+    <text x="255" y="276" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+
+    <text x="170" y="315" text-anchor="middle" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Each Si shares 4 valence electrons; tightly bound at low T</text>
+  </g>
+
+  <!-- RIGHT PANEL: EXTRINSIC DOPED SILICON -->
+  <g transform="translate(420, 85)">
+    <rect width="340" height="330" fill="#0f172a" stroke="#00f5d4" stroke-width="1.5" rx="8"/>
+    <text x="170" y="28" text-anchor="middle" fill="#00f5d4" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="bold">EXTRINSIC DOPING (N-Type Donor: P)</text>
+
+    <!-- Covalent bond lines -->
+    <line x1="85" y1="100" x2="170" y2="100" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="100" x2="255" y2="100" stroke="#334155" stroke-width="4"/>
+    <line x1="85" y1="185" x2="170" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="185" x2="255" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="85" y1="270" x2="170" y2="270" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="270" x2="255" y2="270" stroke="#334155" stroke-width="4"/>
+
+    <line x1="85" y1="100" x2="85" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="85" y1="185" x2="85" y2="270" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="100" x2="170" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="170" y1="185" x2="170" y2="270" stroke="#334155" stroke-width="4"/>
+    <line x1="255" y1="100" x2="255" y2="185" stroke="#334155" stroke-width="4"/>
+    <line x1="255" y1="185" x2="255" y2="270" stroke="#334155" stroke-width="4"/>
+
+    <!-- Outer Si atoms -->
+    <circle cx="85" cy="100" r="22" fill="url(#atomSi)"/>
+    <text x="85" y="106" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="170" cy="100" r="22" fill="url(#atomSi)"/>
+    <text x="170" y="106" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="255" cy="100" r="22" fill="url(#atomSi)"/>
+    <text x="255" y="106" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+
+    <circle cx="85" cy="185" r="22" fill="url(#atomSi)"/>
+    <text x="85" y="191" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    
+    <!-- CENTRAL PHOSPHORUS DONOR (Group V: 5 valence electrons) -->
+    <circle cx="170" cy="185" r="24" fill="url(#atomDonor)" filter="url(#glowE)"/>
+    <text x="170" y="191" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">P⁺</text>
+
+    <circle cx="255" cy="185" r="22" fill="url(#atomSi)"/>
+    <text x="255" y="191" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+
+    <circle cx="85" cy="270" r="22" fill="url(#atomSi)"/>
+    <text x="85" y="276" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="170" cy="270" r="22" fill="url(#atomSi)"/>
+    <text x="170" y="276" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+    <circle cx="255" cy="270" r="22" fill="url(#atomSi)"/>
+    <text x="255" y="276" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">Si</text>
+
+    <!-- FREE DELOCALIZED CONDUCTION ELECTRON -->
+    <circle cx="205" cy="155" r="8" fill="#facc15" filter="url(#glowE)"/>
+    <text x="205" y="159" text-anchor="middle" fill="#713f12" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold">e⁻</text>
+    <path d="M 205 155 Q 230 140, 220 120" stroke="#facc15" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+
+    <text x="170" y="315" text-anchor="middle" fill="#00f5d4" font-family="'Segoe UI', sans-serif" font-size="11">5th valence electron enters conduction band with ~0.045 eV</text>
+  </g>
+</svg>

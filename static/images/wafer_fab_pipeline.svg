@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <rect width="900" height="450" fill="#080e1e" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold">
+    SEMICONDUCTOR CLEANROOM FABRICATION PIPELINE
+  </text>
+  <text x="450" y="58" text-anchor="middle" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">
+    From Single-Crystal Ingot to Nanometer Photolithography, Etching, Metallization &amp; Packaging
+  </text>
+
+  <!-- 6 Step Cards -->
+  <!-- Step 1: Crystal & Wafering -->
+  <g transform="translate(30, 85)">
+    <rect width="125" height="280" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" rx="8"/>
+    <circle cx="62" cy="35" r="18" fill="#0284c7"/>
+    <text x="62" y="40" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">1</text>
+    <text x="62" y="75" text-anchor="middle" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">INGOT &amp; WAFER</text>
+    <!-- Visual icon: Ingot & Slice -->
+    <rect x="42" y="100" width="40" height="60" rx="6" fill="#475569"/>
+    <ellipse cx="62" cy="180" rx="35" ry="12" fill="#00f5d4" opacity="0.8"/>
+    <text x="62" y="215" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Czochralski single crystal pulled &amp; sliced to 300mm mirror disc</text>
+  </g>
+
+  <!-- Step 2: Spin Coat Photoresist -->
+  <g transform="translate(175, 85)">
+    <rect width="125" height="280" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8"/>
+    <circle cx="62" cy="35" r="18" fill="#334155"/>
+    <text x="62" y="40" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">2</text>
+    <text x="62" y="75" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">PHOTORESIST</text>
+    <rect x="25" y="110" width="75" height="15" fill="#f59e0b" rx="2"/>
+    <rect x="25" y="127" width="75" height="20" fill="#00f5d4" opacity="0.7" rx="2"/>
+    <text x="62" y="215" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Light-sensitive polymer spun uniformly across the spinning wafer</text>
+  </g>
+
+  <!-- Step 3: EUV Lithography -->
+  <g transform="translate(320, 85)">
+    <rect width="125" height="280" fill="#0f172a" stroke="#a855f7" stroke-width="2" rx="8"/>
+    <circle cx="62" cy="35" r="18" fill="#9333ea"/>
+    <text x="62" y="40" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">3</text>
+    <text x="62" y="75" text-anchor="middle" fill="#c084fc" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">EUV STEPPER</text>
+    <!-- Mask and light beam -->
+    <rect x="35" y="100" width="55" height="10" fill="#e2e8f0"/>
+    <polygon points="40,112 85,112 95,160 30,160" fill="#c084fc" opacity="0.4"/>
+    <rect x="25" y="160" width="75" height="15" fill="#f59e0b" rx="2"/>
+    <text x="62" y="215" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">13.5 nm Extreme Ultraviolet light projects sub-micron mask patterns</text>
+  </g>
+
+  <!-- Step 4: Etch & Implantation -->
+  <g transform="translate(465, 85)">
+    <rect width="125" height="280" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8"/>
+    <circle cx="62" cy="35" r="18" fill="#334155"/>
+    <text x="62" y="40" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">4</text>
+    <text x="62" y="75" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">ETCH &amp; IMPLANT</text>
+    <!-- Ion beams -->
+    <line x1="45" y1="105" x2="45" y2="155" stroke="#ef4444" stroke-width="2"/>
+    <line x1="62" y1="105" x2="62" y2="155" stroke="#ef4444" stroke-width="2"/>
+    <line x1="80" y1="105" x2="80" y2="155" stroke="#ef4444" stroke-width="2"/>
+    <rect x="25" y="155" width="75" height="20" fill="#00f5d4" opacity="0.6" rx="2"/>
+    <text x="62" y="215" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Plasma RIE dry etching and high-energy ion beam dopant implantation</text>
+  </g>
+
+  <!-- Step 5: Metal & CMP -->
+  <g transform="translate(610, 85)">
+    <rect width="125" height="280" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8"/>
+    <circle cx="62" cy="35" r="18" fill="#334155"/>
+    <text x="62" y="40" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">5</text>
+    <text x="62" y="75" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">INTERCONNECTS</text>
+    <!-- Multi metal layers -->
+    <line x1="30" y1="115" x2="95" y2="115" stroke="#f59e0b" stroke-width="3"/>
+    <line x1="30" y1="135" x2="95" y2="135" stroke="#38bdf8" stroke-width="3"/>
+    <line x1="30" y1="155" x2="95" y2="155" stroke="#f59e0b" stroke-width="3"/>
+    <text x="62" y="215" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Up to 15+ Copper metallization layers planarized with CMP</text>
+  </g>
+
+  <!-- Step 6: Test & Packaging -->
+  <g transform="translate(755, 85)">
+    <rect width="125" height="280" fill="#0f172a" stroke="#10b981" stroke-width="1.5" rx="8"/>
+    <circle cx="62" cy="35" r="18" fill="#059669"/>
+    <text x="62" y="40" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">6</text>
+    <text x="62" y="75" text-anchor="middle" fill="#34d399" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">PACKAGING</text>
+    <!-- Packaged Chip -->
+    <rect x="35" y="110" width="55" height="55" fill="#1e293b" stroke="#34d399" stroke-width="2" rx="4"/>
+    <rect x="47" y="122" width="31" height="31" fill="#0f172a" stroke="#64748b"/>
+    <text x="62" y="215" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Wafer dicing, automated probe test, flip-chip or 2.5D substrate mount</text>
+  </g>
+
+  <!-- Cleanroom ISO 1 banner -->
+  <rect x="30" y="380" width="850" height="48" fill="#0f172a" stroke="#1e293b" rx="6"/>
+  <text x="450" y="402" text-anchor="middle" fill="#00f5d4" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">
+    ISO CLASS 1 CLEANROOM SPECIFICATION: &lt; 10 particles per m³ (&gt;0.1 μm)
+  </text>
+  <text x="450" y="419" text-anchor="middle" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">
+    Cycle time: 3 to 4 months through over 1,000 discrete automated chemical and physical manufacturing steps
+  </text>
+</svg>

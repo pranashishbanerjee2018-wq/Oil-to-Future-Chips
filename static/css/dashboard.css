@@ -1,0 +1,290 @@
+/* ==========================================================================
+   MATLAB SCIENTIFIC DASHBOARD & ENGINEERING SUITE MODAL
+   Project: "Semiconductors — The New Oil of the Future"
+   ========================================================================== */
+
+.matlab-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(4, 8, 16, 0.85);
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.matlab-modal-overlay.active {
+  display: flex;
+}
+
+.matlab-modal-window {
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  background: #09101f;
+  border: 1px solid rgba(0, 245, 212, 0.4);
+  border-radius: 14px;
+  box-shadow: 0 0 50px rgba(0, 245, 212, 0.25), 0 20px 50px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 16px 24px;
+  background: #0f1a30;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.modal-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.modal-engine-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  background: rgba(0, 245, 212, 0.12);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 245, 212, 0.3);
+}
+
+.btn-close-modal {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid var(--border-subtle);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-close-modal:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+/* Tab Bar */
+.modal-tab-bar {
+  display: flex;
+  background: #070d1a;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0 16px;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.dash-tab-btn {
+  padding: 12px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.dash-tab-btn:hover {
+  color: #ffffff;
+}
+
+.dash-tab-btn.active {
+  color: var(--accent-cyan);
+  border-bottom-color: var(--accent-cyan);
+  background: rgba(0, 245, 212, 0.05);
+}
+
+/* Tab Content Viewport */
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.dash-tab-content {
+  display: none;
+  height: 100%;
+}
+
+.dash-tab-content.active {
+  display: block;
+}
+
+/* Experiment Grid Layout (Left Controls, Right Plot) */
+.experiment-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  height: 100%;
+}
+
+.controls-card {
+  background: #0e172a;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.controls-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 4px;
+}
+
+.param-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.param-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.param-label {
+  color: var(--text-secondary);
+}
+
+.param-value {
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+}
+
+.dash-slider {
+  width: 100%;
+  accent-color: var(--accent-cyan);
+  cursor: pointer;
+}
+
+/* Live Output Result Callout */
+.live-result-box {
+  background: #080d1a;
+  border: 1px solid rgba(0, 245, 212, 0.3);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 8px;
+}
+
+.result-metric-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.8px;
+}
+
+.result-metric-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  margin: 4px 0;
+}
+
+.result-status-text {
+  font-size: 0.78rem;
+  color: #34d399;
+}
+
+/* Plot Card */
+.plot-display-card {
+  background: #0e172a;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plot-full-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.plot-caption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Equations and Assumptions Box */
+.formula-callout {
+  background: rgba(30, 41, 59, 0.5);
+  border-left: 3px solid var(--accent-blue);
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #e2e8f0;
+}
+
+/* Results Data Table */
+.data-table-container {
+  margin-top: 16px;
+  background: #080d1a;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.semiconductor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.semiconductor-table th {
+  background: #131f38;
+  color: var(--accent-cyan);
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.semiconductor-table td {
+  padding: 10px 14px;
+  border-top: 1px solid rgba(56, 189, 248, 0.1);
+  color: #e2e8f0;
+}
+
+.semiconductor-table tr:hover {
+  background: rgba(56, 189, 248, 0.05);
+}

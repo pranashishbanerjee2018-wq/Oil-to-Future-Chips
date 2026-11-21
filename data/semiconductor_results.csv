@@ -1,0 +1,9 @@
+Metric,Value,Units,Description
+Thermal_Voltage_300K,0.025852,V,Thermal voltage kT/q at 300 Kelvin
+Diode_TurnOn_Knee,0.70,V,Nominal silicon PN forward voltage
+MOSFET_VTH,0.40,V,Long-channel threshold voltage
+MOSFET_Max_ID_1.4V,5.3455,mA,"Drain current at VGS=1.4V, VDS=1.8V"
+CMOS_Power_1V_3GHz,1.1250,W,CMOS dynamic power at 1.0V and 3.0GHz
+Yield_100mm2_D0_0.08,92.31,%,Poisson yield for 100 mm² die at D0=0.08 def/cm²
+Yield_850mm2_D0_0.08,50.66,%,Poisson yield for 850 mm² die at D0=0.08 def/cm²
+Modern_Max_Transistors,208000000000,count,NVIDIA Blackwell B200 Dual-Die Package (2024)

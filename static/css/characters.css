@@ -1,0 +1,215 @@
+/* ==========================================================================
+   RESEARCHER CHARACTER RIG & VECTOR ANIMATION STYLES
+   Project: "Semiconductors — The New Oil of the Future"
+   Characters: Dr. Theodore Voss & Dr. Caleb Sterling
+   ========================================================================== */
+
+.characters-stage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 4vw;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+.character-container {
+  position: relative;
+  width: 32vw;
+  max-width: 440px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s ease;
+  pointer-events: auto;
+}
+
+.character-theodore {
+  transform-origin: bottom center;
+}
+
+.character-caleb {
+  transform-origin: bottom center;
+}
+
+/* Speaker Highlight Effect */
+.character-container.is-speaking {
+  filter: drop-shadow(0 0 18px rgba(0, 210, 255, 0.45));
+}
+
+.character-container.is-listening {
+  opacity: 0.92;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+}
+
+/* Researcher Name Badges */
+.character-badge {
+  position: absolute;
+  top: 4%;
+  padding: 6px 14px;
+  background: rgba(13, 21, 39, 0.85);
+  border: 1px solid rgba(0, 245, 212, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.character-container.is-speaking .character-badge {
+  border-color: #00f5d4;
+  background: rgba(13, 21, 39, 0.95);
+  box-shadow: 0 0 12px rgba(0, 245, 212, 0.4);
+  transform: scale(1.05);
+}
+
+.character-badge .badge-name {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #f8fafc;
+}
+
+.character-theodore .character-badge .badge-name {
+  color: #38bdf8;
+}
+
+.character-caleb .character-badge .badge-name {
+  color: #00f5d4;
+}
+
+.character-badge .badge-role {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.68rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.character-badge .badge-status {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #64748b;
+  vertical-align: middle;
+}
+
+.character-container.is-speaking .badge-status {
+  background-color: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+  animation: pulse-status 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse-status {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Character SVG Layer */
+.character-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Idle Breathing Animation */
+.char-torso-group {
+  transform-origin: bottom center;
+  animation: breathing 4.5s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-2px) scaleY(1.008); }
+}
+
+/* Head Dynamics */
+.char-head-group {
+  transform-origin: 50% 65%;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.is-speaking .char-head-group {
+  animation: speaking-head-bob 2.8s ease-in-out infinite;
+}
+
+.is-listening .char-head-group {
+  animation: listening-head-nod 6.0s ease-in-out infinite;
+}
+
+@keyframes speaking-head-bob {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(1.2deg) translateY(-2px); }
+  50% { transform: rotate(-0.8deg) translateY(1px); }
+  75% { transform: rotate(1.0deg) translateY(-1px); }
+}
+
+@keyframes listening-head-nod {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(-1.5deg) translateY(1px); }
+  40% { transform: rotate(-0.5deg) translateY(0); }
+  75% { transform: rotate(1deg); }
+}
+
+/* Eyelids / Blinking */
+.eyelid-top {
+  transform-origin: top center;
+  transition: transform 0.08s ease;
+}
+
+.char-blinking .eyelid-top {
+  transform: scaleY(1);
+}
+
+.char-open-eye .eyelid-top {
+  transform: scaleY(0);
+}
+
+/* Viseme Visibility Control */
+.viseme {
+  display: none;
+}
+
+.viseme.active {
+  display: block;
+}
+
+/* Gestures & Arm Animations */
+.char-arm-left, .char-arm-right {
+  transform-origin: 30% 20%;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Gesture Classes */
+.gesture-explain .char-arm-right {
+  transform: rotate(-18deg) translateY(-6px);
+}
+
+.gesture-point .char-arm-left {
+  transform: rotate(26deg) translateY(-10px);
+}
+
+.gesture-think .char-arm-right {
+  transform: rotate(-45deg) translateY(-22px) translateX(-8px);
+}
+
+.gesture-datapad .char-arm-left {
+  transform: rotate(15deg) translateY(-4px);
+}
+
+.gesture-rest .char-arm-left,
+.gesture-rest .char-arm-right {
+  transform: rotate(0deg);
+}

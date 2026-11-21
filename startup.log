@@ -1,0 +1,22 @@
+============================================================================
+ SEMICONDUCTORS — THE NEW OIL OF THE FUTURE
+ STARTUP DIAGNOSTICS & EXECUTION LOG
+ Started: 2026-11-21 23:47:26
+============================================================================
+
+[2026-11-21 23:47:26] Project Directory: C:\Users\prana\.gemini\antigravity\scratch\Semiconductors_The_New_Oil_of_the_Future
+[2026-11-21 23:47:26] Python Executable: C:\Users\prana\AppData\Local\Programs\Python\Python314\python.exe
+[2026-11-21 23:47:26] Python Version: 3.14.4 (win32)
+[2026-11-21 23:47:31] Dependency verification results:
+[2026-11-21 23:47:31]   - Flask: 3.1.3
+[2026-11-21 23:47:31]   - NumPy: 2.4.4
+[2026-11-21 23:47:31]   - Matplotlib: 3.11.2
+[2026-11-21 23:47:31]   - Pandas: 3.0.2
+[2026-11-21 23:47:31] Port 5000 Availability: Available (127.0.0.1:5000 is free)
+[2026-11-21 23:47:31] Precomputed results and scientific plots verified.
+[2026-11-21 23:47:31] Audio assets verified.
+[2026-11-21 23:47:31] Scientific vector diagrams verified.
+[2026-11-21 23:47:31] Pre-flight checks passed successfully. Ready to launch Flask.
+[2026-11-21 23:47:33] Flask Startup Command: python app.py (Host: 127.0.0.1, Port: 5000)
+[2026-11-21 23:47:33] Server Startup Status: Operational (HTTP 200 confirmed at http://127.0.0.1:5000/)
+[2026-11-21 23:47:33] Browser Launch Status: Successfully opened http://127.0.0.1:5000/ in default browser.

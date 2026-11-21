@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <rect width="900" height="450" fill="#080e1e" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold">
+    NEXT-GENERATION SEMICONDUCTOR HORIZONS
+  </text>
+  <text x="450" y="58" text-anchor="middle" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="13">
+    Beyond Traditional Moore's Law: 3D Packaging, Wide-Bandgap, Silicon Photonics, and Neuromorphic Hardware
+  </text>
+
+  <!-- Pillar 1: 3D Chiplets & Advanced Packaging -->
+  <g transform="translate(40, 85)">
+    <rect width="185" height="280" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" rx="8"/>
+    <text x="92" y="30" text-anchor="middle" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">3D CHIPLETS &amp; TSV</text>
+    <rect x="30" y="50" width="125" height="24" fill="#0284c7" rx="3"/>
+    <text x="92" y="66" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">Compute Die (3nm)</text>
+    
+    <rect x="30" y="80" width="125" height="24" fill="#0369a1" rx="3"/>
+    <text x="92" y="96" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">HBM3e Memory Stack</text>
+
+    <rect x="20" y="112" width="145" height="15" fill="#f59e0b" rx="2"/>
+    <text x="92" y="124" text-anchor="middle" fill="#451a03" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold">Silicon Interposer / Bridge</text>
+
+    <text x="92" y="165" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Deconstructs massive monolithic reticle-limited dies into modular high-yield silicon tiles interconnected via micro-bumps and Through-Silicon Vias.</text>
+    <text x="92" y="255" text-anchor="middle" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">Yield Maximization</text>
+  </g>
+
+  <!-- Pillar 2: Wide Bandgap (GaN & SiC) -->
+  <g transform="translate(250, 85)">
+    <rect width="185" height="280" fill="#0f172a" stroke="#00f5d4" stroke-width="1.5" rx="8"/>
+    <text x="92" y="30" text-anchor="middle" fill="#00f5d4" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">WIDE-BANDGAP (GaN/SiC)</text>
+    
+    <circle cx="92" cy="80" r="32" fill="#065f46" stroke="#00f5d4" stroke-width="2"/>
+    <text x="92" y="78" text-anchor="middle" fill="#00f5d4" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold">GaN / SiC</text>
+    <text x="92" y="93" text-anchor="middle" fill="#99f6e4" font-family="'Segoe UI', sans-serif" font-size="10">Eg &gt; 3.2 eV</text>
+
+    <text x="92" y="150" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">High critical electric breakdown fields (10x Silicon), enabling 99%+ power conversion efficiency in Electric Vehicles, renewable inverters, and AI server power stages.</text>
+    <text x="92" y="255" text-anchor="middle" fill="#00f5d4" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">Extreme Power Density</text>
+  </g>
+
+  <!-- Pillar 3: Silicon Photonics -->
+  <g transform="translate(460, 85)">
+    <rect width="185" height="280" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5" rx="8"/>
+    <text x="92" y="30" text-anchor="middle" fill="#f59e0b" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">SILICON PHOTONICS</text>
+
+    <!-- Optical waveguides -->
+    <path d="M 30 75 Q 92 100, 155 75" stroke="#f59e0b" stroke-width="3" fill="none"/>
+    <path d="M 30 90 Q 92 65, 155 90" stroke="#f43f5e" stroke-width="3" fill="none"/>
+
+    <text x="92" y="150" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Replaces resistive copper traces with on-chip laser waveguides. Provides petabit-per-second bandwidth at sub-picojoule energy per bit for AI cluster fabrics.</text>
+    <text x="92" y="255" text-anchor="middle" fill="#f59e0b" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">Light-Speed Interconnects</text>
+  </g>
+
+  <!-- Pillar 4: Cryogenic & Neuromorphic -->
+  <g transform="translate(670, 85)">
+    <rect width="185" height="280" fill="#0f172a" stroke="#c084fc" stroke-width="1.5" rx="8"/>
+    <text x="92" y="30" text-anchor="middle" fill="#c084fc" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">NEUROMORPHIC / QUANTUM</text>
+
+    <!-- Quantum Qubit / Synapse -->
+    <circle cx="92" cy="78" r="28" fill="#581c87" stroke="#c084fc" stroke-width="2"/>
+    <text x="92" y="82" text-anchor="middle" fill="#e9d5ff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">|ψ⟩ / Synapse</text>
+
+    <text x="92" y="150" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">Spiking event-driven neural architectures and superconducting Josephson junction circuits operating at 15 mK dilution refrigeration temperatures.</text>
+    <text x="92" y="255" text-anchor="middle" fill="#c084fc" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">Non-Von Neumann Hardware</text>
+  </g>
+
+  <!-- Geopolitical & Supply Chain Footer -->
+  <rect x="40" y="380" width="815" height="48" fill="#0f172a" stroke="#1e293b" rx="6"/>
+  <text x="447" y="402" text-anchor="middle" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">
+    STRATEGIC ECOSYSTEM: Extreme Capital Intensity ($20B+ per Leading-Edge Giga-Fab)
+  </text>
+  <text x="447" y="419" text-anchor="middle" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">
+    Complex global interdependence: High-purity neon gas, ultra-pure water (UPW), polysilicon, EUV optics, EDA software
+  </text>
+</svg>

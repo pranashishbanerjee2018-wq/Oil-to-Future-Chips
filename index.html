@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEMICONDUCTORS — THE NEW OIL OF THE FUTURE</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/characters.css">
+  <link rel="stylesheet" href="static/css/scenes.css">
+  <link rel="stylesheet" href="static/css/dashboard.css">
+</head>
+<body>
+  <!-- Ambient Circuit Wave Background Canvas -->
+  <canvas id="circuit-canvas"></canvas>
+
+  <!-- Presentation Main Viewport -->
+  <main class="presentation-viewport">
+    <!-- Top Header Bar -->
+    <header class="header-bar">
+      <div class="header-brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <div class="brand-title">SEMICONDUCTORS — THE NEW OIL OF THE FUTURE</div>
+        </div>
+        <span class="brand-tag">v2.0 • 165s</span>
+      </div>
+
+      <!-- Scene Navigation Pills -->
+      <nav class="scene-nav-pills" aria-label="Scene Navigation">
+        <button class="scene-pill active" data-scene-id="1">1. Foundations</button>
+        <button class="scene-pill" data-scene-id="2">2. Physics</button>
+        <button class="scene-pill" data-scene-id="3">3. Transistors</button>
+        <button class="scene-pill" data-scene-id="4">4. Fabrication</button>
+        <button class="scene-pill" data-scene-id="5">5. MATLAB</button>
+        <button class="scene-pill" data-scene-id="6">6. Future</button>
+        <button class="scene-pill" data-scene-id="7">7. Revolution</button>
+      </nav>
+
+      <!-- Header Utilities -->
+      <div class="header-actions">
+        <button class="btn-header btn-matlab-highlight" id="btn-open-matlab">
+          <span>📊</span> MATLAB SUITE
+        </button>
+        <button class="btn-header" id="btn-toggle-subtitles">
+          <span>💬</span> SUBS ON
+        </button>
+        <button class="btn-header" id="btn-toggle-sound">
+          <span>🔊</span> SOUND ON
+        </button>
+        <button class="btn-header" id="btn-toggle-diag">
+          <span>⚙️</span> DIAG
+        </button>
+        <button class="btn-header" id="btn-toggle-fullscreen">
+          <span>⛶</span> FULLSCREEN
+        </button>
+      </div>
+    </header>
+
+    <!-- Scene Information Overlay Banner -->
+    <div class="scene-info-overlay">
+      <div class="scene-title-badge">CURRENT SCIENTIFIC SCENE</div>
+      <h1 class="current-scene-title" id="current-scene-title">SCENE 1 — THE INVISIBLE POWER RUNNING THE WORLD</h1>
+      <p class="current-scene-subtitle" id="current-scene-subtitle">The Foundation of the Modern Technological Era</p>
+    </div>
+
+    <!-- Stage Center Area -->
+    <section class="stage-main-area">
+      <!-- Background Visuals Layer (Scenes 1 - 7) -->
+      <div id="scene-visuals-stage"></div>
+
+      <!-- Researcher Characters Rig Stage -->
+      <div class="characters-stage">
+        <!-- Dr. Theodore Voss (Left, Senior Scientist) -->
+        <div class="character-container character-theodore is-listening" id="char-theodore"></div>
+        <!-- Dr. Caleb Sterling (Right, Microelectronics Researcher) -->
+        <div class="character-container character-caleb is-listening" id="char-caleb"></div>
+      </div>
+
+      <!-- Synchronized Subtitles Container -->
+      <div class="subtitle-container" id="subtitle-container">
+        <span class="subtitle-speaker" id="subtitle-speaker"></span>
+        <span class="subtitle-text" id="subtitle-text"></span>
+      </div>
+    </section>
+
+    <!-- Bottom Timeline and Controls -->
+    <footer class="control-bar">
+      <!-- Interactive Scrubber -->
+      <div class="timeline-scrubber" id="timeline-scrubber" title="Click to Seek Timeline">
+        <div class="timeline-progress" id="timeline-progress"></div>
+      </div>
+
+      <!-- Control Buttons Row -->
+      <div class="control-buttons-row">
+        <div class="left-controls">
+          <button class="btn-ctrl btn-primary-play" id="btn-play-pause">▶ PLAY</button>
+          <button class="btn-ctrl" id="btn-restart">↺ RESTART</button>
+          <button class="btn-ctrl" id="btn-prev-scene">◀ PREV</button>
+          <button class="btn-ctrl" id="btn-next-scene">NEXT ▶</button>
+        </div>
+
+        <div class="right-controls">
+          <span class="time-readout" id="time-display">00:00 / 02:45</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Start Presentation Splash Screen -->
+  <div class="start-splash" id="start-splash">
+    <div class="splash-chip-icon">⚡</div>
+    <h1 class="splash-title">SEMICONDUCTORS — THE NEW OIL OF THE FUTURE</h1>
+    <div class="splash-subtitle">A CINEMATIC SCIENTIFIC PRESENTATION • 165 SECONDS</div>
+    <p class="splash-desc">
+      An intellectual academic conversation between Senior Semiconductor Scientist <strong>Dr. Theodore Voss</strong> 
+      and Microelectronics Researcher <strong>Dr. Caleb Sterling</strong>. Exploring solid-state physics, EUV nanofabrication, 
+      genuine MATLAB engineering computations, and the geopolitical battle for the silicon frontier.
+    </p>
+
+    <div class="splash-researchers">
+      <div class="researcher-card">
+        <div class="res-name">Dr. Theodore Voss</div>
+        <div class="res-title">Senior Semiconductor Research Scientist (38)</div>
+      </div>
+      <div class="researcher-card">
+        <div class="res-name">Dr. Caleb Sterling</div>
+        <div class="res-title">Microelectronics &amp; Computational Systems (29)</div>
+      </div>
+    </div>
+
+    <button class="btn-launch-presentation" id="btn-splash-start">
+      START PRESENTATION ▶
+    </button>
+  </div>
+
+  <!-- Diagnostics Side Panel -->
+  <aside class="diagnostics-panel" id="diagnostics-panel">
+    <div class="diag-header">
+      <span class="diag-title">SYSTEM DIAGNOSTICS</span>
+      <button class="diag-close" id="btn-close-diag">✕</button>
+    </div>
+    <div class="diag-row">
+      <span class="diag-label">Theodore Voice: </span>
+      <span class="diag-val" id="diag-theo-voice">Scanning...</span>
+    </div>
+    <div class="diag-row">
+      <span class="diag-label">Caleb Voice: </span>
+      <span class="diag-val" id="diag-caleb-voice">Scanning...</span>
+    </div>
+    <div class="diag-row">
+      <span class="diag-label">Timeline Status: </span>
+      <span class="diag-val" id="diag-timeline-status">0.00s / 165.0s</span>
+    </div>
+    <div class="diag-row">
+      <span class="diag-label">Active Turn: </span>
+      <span class="diag-val" id="diag-active-dialogue">None</span>
+    </div>
+    <div class="diag-row">
+      <span class="diag-label">Audio Engine: </span>
+      <span class="diag-val" id="diag-audio-status">STANDBY</span>
+    </div>
+    <div class="diag-row">
+      <span class="diag-label">MATLAB Script: </span>
+      <span class="diag-val">SemiconductorAnalysis.m (Verified)</span>
+    </div>
+  </aside>
+
+  <!-- MATLAB Scientific Results & Interactive Engineering Modal -->
+  <div class="matlab-modal-overlay" id="matlab-modal">
+    <div class="matlab-modal-window">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <div class="modal-title">MATLAB MICROELECTRONICS ENGINEERING SUITE</div>
+          <span class="modal-engine-badge" id="dash-engine-status">MATLAB 2024 / Certified Python Engine</span>
+        </div>
+        <button class="btn-close-modal" id="btn-close-matlab">✕</button>
+      </div>
+
+      <!-- Tab Bar -->
+      <div class="modal-tab-bar">
+        <button class="dash-tab-btn active" data-tab="tab-exp1">Exp 1: Diode IV</button>
+        <button class="dash-tab-btn" data-tab="tab-exp2">Exp 2: MOSFET Output</button>
+        <button class="dash-tab-btn" data-tab="tab-exp3">Exp 3: CMOS Power</button>
+        <button class="dash-tab-btn" data-tab="tab-exp4">Exp 4: Wafer Yield</button>
+        <button class="dash-tab-btn" data-tab="tab-exp5">Exp 5: Moore's Law</button>
+        <button class="dash-tab-btn" data-tab="tab-summary">Data Table &amp; CSV</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- TAB 1: SHOCKLEY DIODE -->
+        <div class="dash-tab-content active" id="tab-exp1">
+          <div class="experiment-grid">
+            <div class="controls-card">
+              <h3>Shockley Diode Interactive Model</h3>
+              <div class="formula-callout">
+                I = I_s · [exp(q·V_D / n·k·T) - 1]
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Applied Bias (V_D):</span>
+                  <span class="param-value" id="calc-vd-val">0.70 V</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-vd-slider" min="-0.5" max="0.82" step="0.01" value="0.70">
+              </div>
+
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Thermal Voltage (V_T = kT/q):</span>
+                  <span class="param-value" id="dash-thermal-vt">25.85 mV (300 K)</span>
+                </div>
+              </div>
+
+              <div class="live-result-box">
+                <div class="result-metric-label">Calculated Diode Current (I_D)</div>
+                <div class="result-metric-val" id="calc-diode-out">1.42 mA</div>
+                <div class="result-status-text" id="calc-diode-status">Forward Conduction</div>
+              </div>
+              <p style="font-size:0.75rem; color:#94a3b8; line-height:1.4;">
+                Assumes ideal step PN junction at 300K with reverse saturation current I_s = 10⁻¹⁴ A and silicon ideality n = 1.05.
+              </p>
+            </div>
+            <div class="plot-display-card">
+              <img src="results/plot1_diode_iv.png" alt="Shockley PN Diode IV Plot" class="plot-full-img">
+              <div class="plot-caption">Experiment 1: Shockley PN Junction Diode I-V Characteristics (Generated via MATLAB / Fallback)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: MOSFET OUTPUT -->
+        <div class="dash-tab-content" id="tab-exp2">
+          <div class="experiment-grid">
+            <div class="controls-card">
+              <h3>Long-Channel nMOSFET Model</h3>
+              <div class="formula-callout">
+                Linear: I_D = μn·Cox·(W/L)·[(V_GS-V_TH)V_DS - V_DS²/2]<br>
+                Sat: I_D = ½·μn·Cox·(W/L)·(V_GS-V_TH)²·(1+λV_DS)
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Gate-Source Voltage (V_GS):</span>
+                  <span class="param-value" id="calc-vgs-val">1.20 V</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-vgs-slider" min="0.0" max="1.6" step="0.05" value="1.20">
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Drain-Source Voltage (V_DS):</span>
+                  <span class="param-value" id="calc-vds-val">1.00 V</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-vds-slider" min="0.0" max="1.8" step="0.05" value="1.00">
+              </div>
+
+              <div class="live-result-box">
+                <div class="result-metric-label">Calculated Drain Current (I_D)</div>
+                <div class="result-metric-val" id="calc-mosfet-out">1.66 mA</div>
+                <div class="result-status-text" id="calc-mosfet-region">Saturation Region</div>
+              </div>
+              <p style="font-size:0.75rem; color:#94a3b8; line-height:1.4;">
+                Physical parameters: W/L = 20, tox = 3.0 nm (Cox ≈ 1.15 μF/cm²), μn = 450 cm²/Vs, V_TH = 0.40 V.
+              </p>
+            </div>
+            <div class="plot-display-card">
+              <img src="results/plot2_mosfet_output.png" alt="MOSFET Output Characteristics" class="plot-full-img">
+              <div class="plot-caption">Experiment 2: Long-Channel nMOSFET Output (I_D - V_DS) Families (Generated via MATLAB / Fallback)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: CMOS POWER -->
+        <div class="dash-tab-content" id="tab-exp3">
+          <div class="experiment-grid">
+            <div class="controls-card">
+              <h3>CMOS Dynamic Power Scaling</h3>
+              <div class="formula-callout">
+                P_dynamic = α · C_eff · V_DD² · f
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Supply Voltage (V_DD):</span>
+                  <span class="param-value" id="calc-vdd-val">1.00 V</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-vdd-slider" min="0.6" max="1.3" step="0.02" value="1.00">
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Clock Frequency (f):</span>
+                  <span class="param-value" id="calc-freq-val">3.0 GHz</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-freq-slider" min="1.0" max="4.5" step="0.1" value="3.0">
+              </div>
+
+              <div class="live-result-box">
+                <div class="result-metric-label">Dynamic Power Consumption</div>
+                <div class="result-metric-val" id="calc-power-out">1.125 W</div>
+                <div class="result-status-text">Quadratic voltage sensitivity (P ∝ V²)</div>
+              </div>
+              <p style="font-size:0.75rem; color:#94a3b8; line-height:1.4;">
+                Assumes effective aggregate switched capacitance C_eff = 2.5 nF and activity factor α = 0.15 (15% logic toggle rate).
+              </p>
+            </div>
+            <div class="plot-display-card">
+              <img src="results/plot3_cmos_power.png" alt="CMOS Dynamic Power vs Voltage" class="plot-full-img">
+              <div class="plot-caption">Experiment 3: Dynamic Power vs Supply Voltage &amp; Frequency (Generated via MATLAB / Fallback)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: WAFER YIELD -->
+        <div class="dash-tab-content" id="tab-exp4">
+          <div class="experiment-grid">
+            <div class="controls-card">
+              <h3>Silicon Wafer Yield Models</h3>
+              <div class="formula-callout">
+                Poisson: Y = exp(-D₀ · A)<br>
+                Murphy:  Y = [(1 - exp(-D₀·A)) / (D₀·A)]²
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Die Area (A):</span>
+                  <span class="param-value" id="calc-area-val">150 mm²</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-area-slider" min="20" max="850" step="10" value="150">
+              </div>
+              <div class="param-group">
+                <div class="param-label-row">
+                  <span class="param-label">Defect Density (D₀):</span>
+                  <span class="param-value" id="calc-d0-val">0.08 def/cm²</span>
+                </div>
+                <input type="range" class="dash-slider" id="calc-d0-slider" min="0.02" max="0.20" step="0.01" value="0.08">
+              </div>
+
+              <div class="live-result-box">
+                <div class="result-metric-label">Predicted Wafer Yield</div>
+                <div class="result-metric-val" id="calc-yield-out">88.7%</div>
+                <div class="result-status-text" id="calc-dies-out">Estimated Viable Dies / 300mm Wafer</div>
+              </div>
+              <p style="font-size:0.75rem; color:#94a3b8; line-height:1.4;">
+                Demonstrates why monolithic GPU reticle limits (~858 mm²) suffer severe yield degradation, spurring modern Chiplet architectures.
+              </p>
+            </div>
+            <div class="plot-display-card">
+              <img src="results/plot4_yield_model.png" alt="Chip Manufacturing Yield Plot" class="plot-full-img">
+              <div class="plot-caption">Experiment 4: Wafer Yield vs Die Area (Poisson &amp; Murphy Models) (Generated via MATLAB / Fallback)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: MOORE'S LAW -->
+        <div class="dash-tab-content" id="tab-exp5">
+          <div class="experiment-grid">
+            <div class="controls-card">
+              <h3>Transistor Scaling &amp; Evolution</h3>
+              <div class="formula-callout">
+                N(t) = N₀ · 2^((t - t₀) / 2 years)
+              </div>
+              <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.5;">
+                From the 1971 Intel 4004 (2,250 planar transistors, 10 μm process) to modern AI multi-die superchips (NVIDIA Blackwell B200 with 208 Billion FinFET/GAA transistors).
+              </p>
+              <div class="live-result-box">
+                <div class="result-metric-label">53-Year Transistor Growth</div>
+                <div class="result-metric-val">~92,444,444×</div>
+                <div class="result-status-text">Exceeding 208 Billion Transistors in 2024</div>
+              </div>
+            </div>
+            <div class="plot-display-card">
+              <img src="results/plot5_moores_law.png" alt="Historical Moore's Law Transistor Scaling" class="plot-full-img">
+              <div class="plot-caption">Experiment 5: Transistor Scaling Across Microprocessor Generations (Generated via MATLAB / Fallback)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: DATA TABLE & CSV -->
+        <div class="dash-tab-content" id="tab-summary">
+          <div class="data-table-container">
+            <table class="semiconductor-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Value</th>
+                  <th>Units</th>
+                  <th>Physical Description &amp; Significance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thermal_Voltage_300K</td>
+                  <td>0.02585</td>
+                  <td>V</td>
+                  <td>kT/q thermal equilibrium voltage at 300 Kelvin</td>
+                </tr>
+                <tr>
+                  <td>Diode_TurnOn_Knee</td>
+                  <td>0.70</td>
+                  <td>V</td>
+                  <td>Nominal silicon forward threshold knee voltage</td>
+                </tr>
+                <tr>
+                  <td>MOSFET_VTH</td>
+                  <td>0.40</td>
+                  <td>V</td>
+                  <td>Long-channel nMOSFET threshold inversion voltage</td>
+                </tr>
+                <tr>
+                  <td>MOSFET_Max_ID_1.4V</td>
+                  <td>3.6260</td>
+                  <td>mA</td>
+                  <td>Saturation drain current at V_GS = 1.4V, V_DS = 1.8V</td>
+                </tr>
+                <tr>
+                  <td>CMOS_Power_1V_3GHz</td>
+                  <td>1.1250</td>
+                  <td>W</td>
+                  <td>CMOS dynamic switching power at 1.0V and 3.0GHz</td>
+                </tr>
+                <tr>
+                  <td>Yield_100mm2_D0_0.08</td>
+                  <td>92.31</td>
+                  <td>%</td>
+                  <td>Poisson wafer yield for 100 mm² die at D0 = 0.08 def/cm²</td>
+                </tr>
+                <tr>
+                  <td>Yield_850mm2_D0_0.08</td>
+                  <td>50.66</td>
+                  <td>%</td>
+                  <td>Poisson yield at reticle limit (850 mm²), explaining chiplet adoption</td>
+                </tr>
+                <tr>
+                  <td>Modern_Max_Transistors</td>
+                  <td>208,000,000,000</td>
+                  <td>count</td>
+                  <td>NVIDIA Blackwell B200 Dual-Die Package (2024)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="static/js/characters.js"></script>
+  <script src="static/js/dialogue.js"></script>
+  <script src="static/js/audio.js"></script>
+  <script src="static/js/scene_visuals.js"></script>
+  <script src="static/js/matlab_dashboard.js"></script>
+  <script src="static/js/timeline.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
